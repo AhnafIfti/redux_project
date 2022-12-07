@@ -30,22 +30,22 @@
 //   numberOfIcecream: 10,
 // };
 
-// const reducer = (previousState = initialState, action) => {
+// const reducer = (state = initialState, action) => {
 //   switch (action.type) {
 //     case BUY_CAKE:
 //       return {
-//         ...previousState,
-//         numberOfCakes: previousState.numberOfCakes - 1,
+//         ...state,
+//         numberOfCakes: state.numberOfCakes - 1,
 //       };
 
 //     case BUY_ICECREAM:
 //       return {
-//         ...previousState,
-//         numberOfIcecream: previousState.numberOfIcecream - 1,
+//         ...state,
+//         numberOfIcecream: state.numberOfIcecream - 1,
 //       };
 
 //     default:
-//       return previousState;
+//       return state;
 //   }
 // };
 
@@ -109,29 +109,29 @@ const initialIcecreamState = {
 
 const combineReducers = redux.combineReducers;
 
-const cakeReducer = (previousState = initialCakeState, action) => {
+const cakeReducer = (state = initialCakeState, action) => {
   switch (action.type) {
     case BUY_CAKE:
       return {
-        ...previousState,
-        numberOfCakes: previousState.numberOfCakes - 1,
+        ...state,
+        numberOfCakes: state.numberOfCakes - 1,
       };
 
     default:
-      return previousState;
+      return state;
   }
 };
 
-const icecreamReducer = (previousState = initialIcecreamState, action) => {
+const icecreamReducer = (state = initialIcecreamState, action) => {
   switch (action.type) {
     case BUY_ICECREAM:
       return {
-        ...previousState,
-        numberOfIcecream: previousState.numberOfIcecream - 1,
+        ...state,
+        numberOfIcecream: state.numberOfIcecream - 1,
       };
 
     default:
-      return previousState;
+      return state;
   }
 };
 

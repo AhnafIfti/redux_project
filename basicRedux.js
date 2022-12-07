@@ -29,16 +29,16 @@ const initialState = {
 };
 
 // REDUCER
-const reducer = (previousState = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case BUY_CAKE:
       return {
-        ...previousState,
-        numberOfCakes: previousState.numberOfCakes - 1,
+        ...state,
+        numberOfCakes: state.numberOfCakes - 1,
       };
 
     default:
-      return previousState;
+      return state;
   }
 };
 
