@@ -101,11 +101,9 @@ function buyIcecream() {
 
 const initialCakeState = {
   numberOfCakes: 10,
-  numberOfIcecream: 10,
 };
 
 const initialIcecreamState = {
-  numberOfCakes: 10,
   numberOfIcecream: 10,
 };
 
